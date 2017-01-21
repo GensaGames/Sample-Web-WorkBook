@@ -30,6 +30,10 @@ class ResultsView(generic.DetailView):
     template_name = 'workbook/results.html'
 
 
+class BaseView(generic.TemplateView):
+    template_name = 'workbook/base.html'
+
+
 def vote(request, question_id):
     p = get_object_or_404(Question, pk=question_id)
     try:

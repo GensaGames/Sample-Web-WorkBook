@@ -1,5 +1,6 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
+from django.views.generic.detail import SingleObjectMixin
 from django.core.urlresolvers import reverse
 from django.views import generic
 from django.utils import timezone
@@ -31,7 +32,7 @@ class ResultsView(generic.DetailView):
 
 
 class BaseView(generic.TemplateView):
-    template_name = 'workbook/base.html'
+    template_name = 'workbook/base_home.html'
 
 
 def vote(request, question_id):

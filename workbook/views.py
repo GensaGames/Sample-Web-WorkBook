@@ -7,8 +7,8 @@ from django.utils import timezone
 from .models import Choice, Question
 
 
-class HomeView(generic.TemplateView):
-    template_name = 'workbook/home_page.html'
+class IndexView(generic.TemplateView):
+    template_name = 'workbook/index_page.html'
 
 
 class ProjectsView(generic.TemplateView):
@@ -28,7 +28,10 @@ class AboutView(generic.TemplateView):
 
 
 
-class IndexView(generic.ListView):
+
+
+
+class IndexView1(generic.ListView):
     template_name = 'workbook/index.html'
     context_object_name = 'latest_question_list'
 

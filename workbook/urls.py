@@ -1,4 +1,4 @@
-from django.conf.urls import url
+from django.conf.urls import url, include
 
 from . import views
 
@@ -6,7 +6,8 @@ urlpatterns = [
     url(r'^$', views.IndexView.as_view(), name='index'),
     url(r'^projects/$', views.ProjectsView.as_view(), name='projects'),
     url(r'^contacts/$', views.ContactView.as_view(), name='contacts'),
-    url(r'^about/$', views.AboutView.as_view(), name='about')
+    url(r'^about/$', views.AboutView.as_view(), name='about'),
+    url(r'^tinymce/', include('tinymce.urls')),
 
     # url(r'^$', views.IndexView.as_view(), name='index'),
     # url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='detail'),

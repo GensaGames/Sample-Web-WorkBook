@@ -9,6 +9,10 @@ urlpatterns = [
     url(r'^about/$', views.AboutView.as_view(), name='about'),
     url(r'^tinymce/', include('tinymce.urls')),
 
+    ## --------------------------------------------------
+    ## Below located work part as Sample
+    ## TODO (Stubs) Remove Helper Stubs
+
     # url(r'^$', views.IndexView.as_view(), name='index'),
     # url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='detail'),
     # url(r'^(?P<pk>[0-9]+)/results/$', views.ResultsView.as_view(), name='results'),

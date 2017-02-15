@@ -23,6 +23,8 @@ class Articles(models.Model):
 
 
 ## --------------------------------------------------
+## Below located work part as Sample
+## TODO (Stubs) Remove Helper Stubs
 
 class Question(models.Model):
     question_text = models.CharField(max_length=200)

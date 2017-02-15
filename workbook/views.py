@@ -10,6 +10,10 @@ from .models import Choice, Question
 class IndexView(generic.TemplateView):
     template_name = 'workbook/index_page.html'
 
+    def get(self, request, *args, **kwargs):
+        test_list = ['SAMPLE_ONE', 'SAMPLE_TWO']
+        return render(request, self.template_name, {'test_list': test_list})
+
 
 class ProjectsView(generic.TemplateView):
     template_name = 'workbook/projects_page.html'
@@ -24,11 +28,9 @@ class AboutView(generic.TemplateView):
 
 
 
-
-
-
-
-
+## --------------------------------------------------
+## Below located work part as Sample
+## TODO (Stubs) Remove Helper Stubs
 
 
 class IndexView1(generic.ListView):

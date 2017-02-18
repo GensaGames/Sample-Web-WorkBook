@@ -1,5 +1,6 @@
 {% extends "workbook/base.html" %}
 {% load static %}
+{% load filters %}
 
 {% block content %}
 
@@ -43,57 +44,42 @@
 </div><!-- CAROUSEL-HEADER -->
 
 
-{% if test_list %}
+{% if stories_list %}
 <div class="container marketing">
-    <ul>
-        {% for testItem in test_list %}
-        <li> {{ testItem }} </li>
-        {% endfor %}
-    </ul>
-</div>
-{% else %}
-<p>No polls are available.</p>
-{% endif %}
-
-
-<div class="container marketing">
-    <!-- START THE FEATURETTES -->
+    {% for item in stories_list %}
     <hr class="featurette-divider">
-
     <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span
-                    class="text-muted">It'll blow your mind.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
-                semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-                commodo.</p>
-        </div>
-        <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto"
-                 alt="Generic placeholder image">
-        </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
+        {% if  forloop.counter0|get_due_date_string %}
         <div class="col-md-7 col-md-push-5">
-            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span>
+            <h2 class="featurette-heading"> {{ item.0 }}
+                <span class="text-muted">See for yourself.</span>
             </h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
-                semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-                commodo.</p>
+            <p class="lead"> {{ item.1 }} </p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto"
-                 alt="Generic placeholder image">
+            <img class="featurette-image img-responsive center-block" src="{{ item.2 }}"
+                 alt="Generic Story image"/>
         </div>
+
+        {% else %}
+        <div class="col-md-7">
+            <h2 class="featurette-heading"> {{ item.0 }}
+                <span class="text-muted">It'll blow your mind.</span>
+            </h2>
+            <p class="lead"> {{ item.1 }} </p>
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive center-block"src="{{ item.2 }}"
+                 alt="Generic Story image">
+        </div>
+        {% endif %}
     </div>
-
-    <hr class="featurette-divider">
-
-    <!-- /END THE FEATURETTES -->
+    {% endfor %}
 </div>
+{% else %}
+<!-- TODO(HTML): Maybe add some empty stubs -->
+{% endif %}
+
 
 
 <div class="footer-margin container marketing">

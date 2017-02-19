@@ -51,9 +51,11 @@
     <div class="row featurette">
         {% if  forloop.counter0|get_due_date_string %}
         <div class="col-md-7 col-md-push-5">
-            <h2 class="featurette-heading"> {{ item.0 }}
+            <a href="{% url 'workbook:stories' forloop.counter0 %}">
+                <h2 class="featurette-heading"> {{ item.0 }}
                 <span class="text-muted">See for yourself.</span>
-            </h2>
+                </h2>
+            </a>
             <p class="lead"> {{ item.1 }} </p>
         </div>
         <div class="col-md-5 col-md-pull-7">

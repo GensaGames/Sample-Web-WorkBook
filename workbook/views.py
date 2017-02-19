@@ -1,6 +1,7 @@
 import os
 
 from django.core.urlresolvers import reverse
+from django.http import Http404
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
@@ -15,34 +16,7 @@ class IndexView(generic.TemplateView):
 
 
     def get(self, request, *args, **kwargs):
-        return render(request, self.template_name, {'stories_list': self.generate_stories()})
-
-
-    def generate_stories(self):
-        stories_main_dir = os.path.join(settings.STATICFILES_DIRS[0], 'workbook', 'stories')
-        stories_list = list()
-        # Iterate all static folder for Articles and Stories
-        # USE UNICODE METHOD, which missing on Python >= 3.5
-        for parent_file in os.listdir(stories_main_dir):
-            story_dir = os.path.join(stories_main_dir, parent_file)
-            story_img_source = story_text_source = story_header = None
-            if not os.path.isdir(story_dir):
-                continue
-            # Gather all items, from Stories, like Tittle, Text and Img.
-            for story_file in os.listdir(story_dir):
-                story_iter_type = os.path.splitext(story_file)
-                if story_iter_type[1] == '.png' or story_iter_type[1] == '.jpg':
-                    story_img_source = os.path.join(story_dir, story_file)
-                    story_img_source = story_img_source.replace(settings.BASE_DIR, '')
-                if story_iter_type[1] == '.txt':
-                    with open(os.path.join(story_dir, story_file), 'r') as story:
-                        story_text_source = unicode(story.read(), errors='ignore')
-                        story_header = story_iter_type[0]
-            # Using list of tuples this items and transfer.
-            if story_header is not None and story_text_source is not None \
-                    and story_img_source is not None:
-                stories_list.append((story_header, story_text_source, story_img_source))
-        return stories_list
+        return render(request, self.template_name, {'stories_list': generate_stories()})
 
 
 class ProjectsView(generic.TemplateView):
@@ -55,6 +29,46 @@ class ContactView(generic.TemplateView):
 
 class AboutView(generic.TemplateView):
     template_name = 'workbook/about_page.html'
+
+
+
+def view_story(request, story_number):
+    try:
+        story_number = repr(story_number)
+    except Question.DoesNotExist:
+        raise Http404("Story does not exist")
+    return render(request, 'workbook/stories_page.html', {'story_counter': story_number})
+
+
+# Generate static Stories from the folder with all sources
+# USE UNICODE METHOD, which missing on Python >= 3.5
+def generate_stories():
+    stories_main_dir = os.path.join(settings.STATICFILES_DIRS[0], 'workbook', 'stories')
+    stories_list = list()
+    # Iterate all static folder for Articles and Stories
+    for parent_file in os.listdir(stories_main_dir):
+        story_dir = os.path.join(stories_main_dir, parent_file)
+        story_img_source = story_text_source = story_header = None
+        if not os.path.isdir(story_dir):
+            continue
+        # Gather all items, from Stories, like Tittle, Text and Img.
+        for story_file in os.listdir(story_dir):
+            story_iter_type = os.path.splitext(story_file)
+            if story_iter_type[1] == '.png' or story_iter_type[1] == '.jpg':
+                story_img_source = os.path.join(story_dir, story_file)
+                story_img_source = story_img_source.replace(settings.BASE_DIR, '')
+            if story_iter_type[1] == '.txt':
+                with open(os.path.join(story_dir, story_file), 'r') as story:
+                    story_text_source = unicode(story.read(), errors='ignore')
+                    story_header = story_iter_type[0]
+        # Using list of tuples this items and transfer.
+        if story_header is not None and story_text_source is not None \
+                and story_img_source is not None:
+            stories_list.append((story_header, story_text_source, story_img_source))
+    return stories_list
+
+
+
 
 
 ## --------------------------------------------------

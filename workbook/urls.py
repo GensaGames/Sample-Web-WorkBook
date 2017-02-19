@@ -7,6 +7,7 @@ urlpatterns = [
     url(r'^projects/$', views.ProjectsView.as_view(), name='projects'),
     url(r'^contacts/$', views.ContactView.as_view(), name='contacts'),
     url(r'^about/$', views.AboutView.as_view(), name='about'),
+    url(r'^stories/([0-9]+)/$', views.view_story, name='stories'),
     url(r'^tinymce/', include('tinymce.urls')),
 
     ## --------------------------------------------------

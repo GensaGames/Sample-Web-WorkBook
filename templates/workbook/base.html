@@ -38,14 +38,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="../../workbook/">Web Work Book</a>
+                    <a class="navbar-brand" href="{% url 'workbook:index' %}">Web Work Book</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="../../workbook/">Home</a></li>
-                        <li><a href="../../workbook/projects/">Server Projects</a></li>
-                        <li><a href="../../workbook/contacts/">Contacts</a></li>
-                        <li><a href="../../workbook/about/">About</a></li>
+                        <li><a href="{% url 'workbook:projects' %}">Server Projects</a></li>
+                        <li><a href="{% url 'workbook:contacts' %}">Contacts</a></li>
+                        <li><a href="{% url 'workbook:about' %}">About</a></li>
                     </ul>
                 </div>
             </div>

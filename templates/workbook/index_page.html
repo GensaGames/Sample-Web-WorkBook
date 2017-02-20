@@ -52,26 +52,26 @@
         {% if  forloop.counter0|get_due_date_string %}
         <div class="col-md-7 col-md-push-5">
                 <h2 class="featurette-heading">
-                    <a href="{% url 'workbook:stories' forloop.counter0 %}">{{ item.0 }}</a>
+                    <a href="{% url 'workbook:stories' forloop.counter0 %}">{{ item.1 }}</a>
                     <span class="text-muted">See for yourself.</span>
                 </h2>
-            <p class="lead"> {{ item.1 }} </p>
+            <p class="lead"> {{ item.2 }} </p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-            <img class="featurette-image img-responsive center-block" src="{{ item.2 }}"
+            <img class="featurette-image img-responsive center-block" src="{{ item.3 }}"
                  alt="Generic Story image"/>
         </div>
 
         {% else %}
         <div class="col-md-7">
             <h2 class="featurette-heading">
-                <a href="{% url 'workbook:stories' forloop.counter0 %}">{{ item.0 }}</a>
+                <a href="{% url 'workbook:stories' forloop.counter0 %}">{{ item.1 }}</a>
                 <span class="text-muted">It'll blow your mind.</span>
             </h2>
-            <p class="lead"> {{ item.1 }} </p>
+            <p class="lead"> {{ item.2 }} </p>
         </div>
         <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block"src="{{ item.2 }}"
+            <img class="featurette-image img-responsive center-block"src="{{ item.3 }}"
                  alt="Generic Story image">
         </div>
         {% endif %}

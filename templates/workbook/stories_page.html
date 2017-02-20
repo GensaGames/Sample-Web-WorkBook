@@ -1,11 +1,22 @@
 {% extends "workbook/base.html" %}
+{% load static %}
 
 {% block content %}
 <br/><br/><br/><br/>
 <div class="container">
     {% if story_counter %}
-    <h2>TEST RESULT VALUE {{story_counter}}</h2>
+    <h2>TEST RESULT VALUE {{ story_counter}}</h2>
     {% endif %}
+
+
+    <script src="/static/libs/jquery/jquery-3.1.1.min.js"></script>
+    <script>
+    $(function(){
+      $("#includedContent").load("{% static '/workbook/stories/Cave_Monsters_Story/Cave_Monsters_Story.html' %}");
+    });
+    </script>
+    <div id="includedContent"></div>
+
 
 </div>
 <br/><br/><br/><br/>

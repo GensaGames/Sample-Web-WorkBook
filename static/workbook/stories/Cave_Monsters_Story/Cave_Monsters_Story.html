@@ -1,0 +1,321 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+{% load static %}
+
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 4.1.6.2 (Linux)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="0;0">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 1in }
+		P { margin-bottom: 0.08in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P ALIGN=RIGHT STYLE="margin-bottom: 0in"><B>History of the “Cave
+Monsters” Game Development</B></P>
+<P STYLE="margin-bottom: 0in"> 
+</P>
+<P STYLE="margin-bottom: 0in"> <B>Preface</B></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in">Actual
+story of the game began later after the appearance of the first
+thoughts. We wanted to create not just a game, but an entire
+atmosphere, and for that we needed to imagine a game not only on the
+basis of “something new”. And creation of that “new” was
+taking from us lots of time and getting us away from the primary aim
+– creation of a good game.</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">“Everything
+new is well-forgotten old” perfectly suits this story. This game
+can hardly surprise you with its interface or control system.  But it
+is that kind of a game, entering which, you find yourself being
+totally in the game. This is called the atmosphere and it is a very
+important point when creating a game. But here we have two sides of a
+medal again. On the one hand, there are games to be preferred while
+being in the subway or standing in a line, these are, as a rule,
+simple games like three in a row. On the other hand, when you come
+home, get yourself comfortable on a sofa and open this very
+atmosphere that we are talking about. I will tell you more about
+mobile development later in the article.</SPAN></P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">There
+is one serious point that was limiting us a lot - 2D design. Why?
+Here we can give several serious arguments. First one - mobile
+platforms. Creating a game for a year, then optimizing it for mobile
+platforms for a long time, and then cut off a serious number of
+audience (because of the insufficient power of the all the devices)
+became a reasonable point. Second – lack of a strong 3D designer
+and designer of appropriate textures. The first thing to occur to a
+fretful user is that 2D is something imperfect. But this thought
+instantly melts away when you look at such game legends as “Limbo”,
+which is on the picture below.</SPAN></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="{% static '/workbook/stories/Cave_Monsters_Story/i_cff23c735360da48_html_47171f1e.png' %}" NAME="image10.png" ALIGN=BOTTOM HSPACE=12 VSPACE=12 WIDTH=602 HEIGHT=257 BORDER=0></P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">It
+was nominated for the best design among 3D graphics competitors, and
+this was inspiring me by the end of project. By the way, did you
+notice that it has only two colors – white and shades of grey? Will
+you find something new in the game? No. Will you be surprised by the
+new game control? No, but will you say that this game is a bad one? 
+I think no, even if you did not play it. And here we get an important
+conclusion which is applicable not only to the sphere of game
+development, but to life in general. Nothing but your own imagination
+and creativity limits you. And I had a wish to give my fantasy a
+life…</SPAN></P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">Positive
+moment is the creation of a team. Since company had more than one
+programmer I had to get a companion for cooperative development. But
+in the end I volunteered to work alone which played a crucial role in
+the game design. On the one hand, team-work allows you to analyze
+your creations from a different point of view. But on the other one,
+working on your own provides your fantasy with no limits.</SPAN></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in"><B><SPAN STYLE="background: #ffffff">What
+to start with?</SPAN></B></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">I
+have partially mentioned that the main complexity of work with mobile
+platforms is 2D design. Among other factors, which make the aim to
+drag the player into our reality more difficult, are small screens.
+And though it is not already such a great problem after 20 mins in
+the game, at the beginning it really is. Here appears a problem for
+designer. There should be lots of elements, but they should not drag
+attention from the main hero away. The importance of the background
+could not be overrated, though at the first sight it is not an
+element of primary importance.</SPAN></P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">Very
+soon I will return to the background, but for the fullness of picture
+I want to come up from the other side.  Now I would like to ask you
+to imagine well-known game “Mario”. It is a typical platformer,
+when a hero stands on a platform - let it be ground. When you look at
+the threshold of the game, when he is running on such platforms, you
+begin to conscious one effect – the ground under him is not simply
+a picture, where he is moving. It is a special zone on which we build
+up a peculiar imagination of a ground in our fantasy, our fantasy
+moves away from the 2D model.</SPAN></P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><SPAN STYLE="background: #ffffff">Moving
+on. Some elements, e.g. trees, are situated on the foreground in the
+reference to the hero. In such a way the hero is blanked out when
+passing through these elements, and again in our mind we create the
+comprehension of such objects that are not 2D for our fantasy and
+they begin to play the part of fully-valid things. This interplay of
+game world is very important for our atmosphere.</SPAN></P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">You
+can and you need to interact with the world in various ways. Each
+move of the hero should create more of such elements. That is why the
+background should become such an element of perception. When you walk
+along the street the motion of the trees in the background is not
+still or running with you, but slightly moving to your side. In the
+development this effect is called parallax.</SPAN></P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">As
+an example we can take the same street with buildings: trees on the
+background are moving with one speed, lamppost (which is also a part
+of the background) is moving with another and so on. In practice this
+looks something like on the picture below.</SPAN></P>
+<P STYLE="margin-left: -0.02in; margin-bottom: 0in"><IMG SRC="i_cff23c735360da48_html_b1b38f80.png" NAME="image12.png" ALIGN=BOTTOM HSPACE=12 VSPACE=12 WIDTH=598 HEIGHT=305 BORDER=0></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">Each
+layer creates its own part in the user’s perception. The motion of
+clouds would be slow even if the hero is standing still, and fast,
+when he is going. The sun would shine brighter and greater if only it
+is not covered with clouds. The motion of mountains will be extremely
+slow and the land on the background would move a bit slower than the
+hero.</SPAN></P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">Such
+games as “</SPAN>Nightmare: Malaria” и “Anoxemia” are
+Android and iOS games that perfectly managed to create multilayer
+parallax. They are successively shown on the pictures.</P>
+<P STYLE="margin-left: -0.02in; margin-bottom: 0in"><IMG SRC="i_cff23c735360da48_html_74e7e894.jpg" NAME="image17.jpg" ALIGN=BOTTOM HSPACE=12 VSPACE=12 WIDTH=602 HEIGHT=338 BORDER=0></P>
+<P STYLE="margin-left: -0.02in; margin-bottom: 0in"><IMG SRC="i_cff23c735360da48_html_e5795643.jpg" NAME="image01.jpg" ALIGN=BOTTOM HSPACE=12 VSPACE=12 WIDTH=600 HEIGHT=338 BORDER=0></P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in">After
+the short period of code implementation I already had resources to
+work with multilayer parallax. It was only the problem of design that
+stayed and which, clearly, I could not do. But the artist issue I
+will keep to the end.</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in"><B>I want to move this wall!</B></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">One
+more moment about which all the users are dreaming is the maximal
+world interaction. To move something you cannot move and to stroke
+something you cannot stroke. Maximal interaction is just what I
+wanted to create in the game. Movement of a hero makes the grass
+fluctuate under his feet. You could drag any brick by the road, shake
+a tree until it falls, to dig the soil in any possible place and so
+on. I wanted nothing to stop the hero and I knew how to do it. The
+only thing that suffered from such a total interact was the game size
+about which we will be speaking later. By using standard methods all
+these continued being highly-functioning and easy to access on mobile
+devices.</SPAN></P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">Total
+world interact allows to solve one and the same problem in different
+ways. Freedom of problemsolving!  This is not throwing of birds in
+the same direction in order to destroy a construction. It is a
+throwing of trotyl-stuffed birds with jet engines and start-buttons
+right into a desired location. Do you feel the difference?</SPAN></P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">One
+more example that makes this moment hard to overestimate is called
+“Machinarium”. It is really incredible game well-known to all.
+Your aim in the game on its every stage is to find and solve the
+problem: to find the way out of the room, to reach the other side of
+a cliff by using all the means available. As a rule each problem has
+only one solving. But why not to get out of the room by crawling
+through the window, breaking or bursting the door open? To reach
+another side of a cliff by bulking lots of junk on its bottom or to
+jump it over with a pole?</SPAN></P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">I
+think I have succeeded in the explanation my aim. And all these were
+exactly what I wanted to implant in the game. It would be total
+freedom of action, limited by the level of the game, where each new
+level would open something uniquely new in the behavior or action of
+a hero.</SPAN></P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in"><SPAN STYLE="background: #ffffff"> <B>Why
+the game weights more than 2 MB?</SPAN></B></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">Now
+we reached another limiting moment in the process of game development
+for mobile platforms. At the same time game size is important and
+not. Not long ago game popularity was partially dependent from actual
+game size. And it is more likely that a user will download 10 games
+of 2 MB than 1 of 20 MB. And nowadays situation is the same and this
+factor is not going to lose its importance quickly. But as the
+technologies develop in a crazy pace we can get an indulgence.  Speed
+of the internet in public networks (from 20 to 100 Mbit\s) today
+allows downloading games with huge sizes.</SPAN></P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">On
+the other side, is it possible for a good game with long and
+interesting story to be 20 MB? Not likely. And users partially begin
+to understand this.</SPAN></P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">Second
+technological moment – performance capabilities of new devices.
+Mobile performance is disputable and interesting moment and we will
+not touch it yet. Another thing is that phone memory opens us wide
+horizons. Capabilities of modern smartphones vary from 4 to 128 GB.
+Models with small internal memory (usually these are models with 4 to
+8 GB of built-in memory) allow using external drives like small USB
+flash drives. All these give us the second indulgence: - modern (and
+not really) smartphones have quite big memory even for the storage of
+huge files.</SPAN></P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in"><B><SPAN STYLE="background: #ffffff">I
+worked on it a lot and I want to tell about it</SPAN></B></P>
+<P STYLE="margin-bottom: 0in"><B><SPAN STYLE="background: #ffffff">	</SPAN></B></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">Now
+we are going to speak about light. Nobody argues that it is very
+important for 3D. More than that – I will not be speaking about it
+if I was not dealing with that sort of games. But is there something
+to tell about it in relation to 2D games?</SPAN></P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">To
+start with do you meet lots of 2D games that use light and especially
+on mobile devices? There are too little of them because it is the
+question of performance and many people just decide to discard it
+usually underestimating this moment. Pay your attention to the
+picture below:</SPAN></P>
+<P STYLE="margin-left: -0.02in; margin-bottom: 0in"><IMG SRC="i_cff23c735360da48_html_6f8ed750.jpg" NAME="image14.jpg" ALIGN=BOTTOM HSPACE=12 VSPACE=12 WIDTH=602 HEIGHT=311 BORDER=0></P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">Is
+not the comprehension of the cubes is building up here? The
+three-dimensional effect is being created and we feel their
+completeness. Our consciousness is not limited by the fact that it is
+just a picture on the screen. We enter this comprehension and this
+atmosphere. This is one more moment of development that took a lot of
+time to find the resources needed.</SPAN></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">After
+more than one day of tries to create and reproduce something similiar
+(and there are a lot of such stuff on the internet) it became quite
+possible to make something like this. There is one big flaw
+represented on the picture above. As you can see all the shadows are
+sharp and not blurred. Another example of such poor shadow you can
+see on the other picture:</SPAN></P>
+<P STYLE="margin-left: -0.02in; margin-bottom: 0in"><IMG SRC="i_cff23c735360da48_html_3c765206.png" NAME="image13.png" ALIGN=BOTTOM HSPACE=12 VSPACE=12 WIDTH=602 HEIGHT=396 BORDER=0></P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">You
+may say that this problem is easily solved by adding a blurring
+effect on a certain layer (where the actual shadow is). But how will
+this filter influence game performance? Very deplorably I may say. So
+the next problem that I faced was a good camera shader to solve the
+problem. There were several solutions and I managed to find a good
+camera shader that blurred the shadow in the right way, but it also
+blurred the background on which the shadow was depicted. And it was
+absolutely not what I needed! This shader worked logically– shadow
+was depicted on a certain layer so the background is to be on that
+layer too.  </SPAN>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">Here,
+luckily, works of a very talented man came in handy. It was indie
+developer named Jake (to whom I am incredibly thankful) and his work
+entitled </SPAN>VLS2D Light. He answered all my questions with his
+developments the results of which I will show soon.</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in"><B>In conclusion</B></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">This
+is not a complete game. And I would really like to tell you about it
+being successful, but it is another story. The game did not find
+sustenance and there no time to make it perfect.</SPAN></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">More
+than that, we decided that the main person in such a development is
+surely a designer. Only due to design, general plan, game idea you
+may enter the great world of game industry.</SPAN></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">We
+have no game story or at least one resource made by designer. There
+is nothing, and everything that I used was simply found on the
+Internet. I would like to represent a game with bright future, but I
+cannot do it for this time.</SPAN></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in"><SPAN STYLE="background: #ffffff">There
+are only three screenshots of short work and great hope. Development
+took only a fortnight, but there existed a game idea for long years. 
+</SPAN>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"> 
+<IMG SRC="i_cff23c735360da48_html_d14e0bc9.png" NAME="image16.png" ALIGN=BOTTOM HSPACE=12 VSPACE=12 WIDTH=652 HEIGHT=334 BORDER=0></P>
+<P STYLE="margin-left: -0.02in; margin-bottom: 0in"><IMG SRC="i_cff23c735360da48_html_6f9b136b.png" NAME="image15.png" ALIGN=BOTTOM HSPACE=12 VSPACE=12 WIDTH=641 HEIGHT=338 BORDER=0></P>
+<P STYLE="margin-left: -0.02in; margin-bottom: 0in"><IMG SRC="i_cff23c735360da48_html_af13353a.png" NAME="image11.png" ALIGN=BOTTOM HSPACE=12 VSPACE=12 WIDTH=643 HEIGHT=342 BORDER=0></P>
+</BODY>
+</HTML>

@@ -59,7 +59,7 @@ def generate_stories():
             story_iter_type = os.path.splitext(story_file)
             if story_iter_type[1] == '.html':
                 story_html = os.path.join(story_dir, story_file)
-            if story_iter_type[1] == '.png' or story_iter_type[1] == '.jpg':
+            if story_iter_type[1] == '.jpg':
                 story_img_source = os.path.join(story_dir, story_file)
                 story_img_source = story_img_source.replace(settings.BASE_DIR, '')
             if story_iter_type[1] == '.txt':

@@ -16,7 +16,10 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from webworkbook import settings
+
 urlpatterns = [
     url(r'^workbook/', include('workbook.urls', namespace='workbook')),
     url(r'^admin/', include(admin.site.urls)),
+
 ]

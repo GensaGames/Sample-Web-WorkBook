@@ -5,20 +5,12 @@
 <br/><br/><br/><br/>
 <div class="container">
     {% if story_counter %}
-    <h2>TEST RESULT VALUE {{ story_counter}}</h2>
+    <h2>TEST VALUE {{ story_counter }}</h2>
     {% endif %}
 
-    <link rel="import" href="{% static '/workbook/stories/Cave_Monsters_Story/Cave_Monsters_Story.html' %}">
+    {% include "stories/Princess_Run_Story/Princess_Run_Story.html" %}
 
-   <!-- {% include "stories/Princess_Run_Story/Princess_Run_Story.html" %}-->
-
-   <!-- <script src="/static/libs/jquery/jquery-3.1.1.min.js"></script>
-    <script>
-    $(function(){
-      $("#includedContent").load("{% static '/workbook/stories/Cave_Monsters_Story/Cave_Monsters_Story.html' %}");
-    });
-    </script>
-    <div id="includedContent"></div>-->
+   <!--{\% include story_counter \%}-->
 
 
 </div>

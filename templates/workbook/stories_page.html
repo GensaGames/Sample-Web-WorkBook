@@ -5,13 +5,13 @@
 <br/><br/><br/><br/>
 <div class="container">
     {% if story_counter %}
-    <h2>TEST VALUE {{ story_counter }}</h2>
+    {% include story_counter %}
+
+    {% else %}
+    <div class="container">
+        Something wrong here. We missed the story!
+    </div>
     {% endif %}
-
-    {% include "stories/Princess_Run_Story/Princess_Run_Story.html" %}
-
-   <!--{\% include story_counter \%}-->
-
 
 </div>
 <br/><br/><br/><br/>

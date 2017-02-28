@@ -33,9 +33,9 @@ class AboutView(generic.TemplateView):
 
 def view_story(request, story_number):
     try:
-        story_number = repr(STATIC_STORIES[int(story_number)][0])
+        story_number = STATIC_STORIES[int(story_number)][0]
     except Question.DoesNotExist:
-        raise Http404("Story does not exist. Something wrong here.")
+        raise Http404("Story does not exist. Something wrong here!")
     return render(request, 'workbook/stories_page.html', {'story_counter': story_number})
 
 

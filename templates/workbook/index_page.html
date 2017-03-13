@@ -41,11 +41,13 @@
             </div>
         </div>
     </div>
-</div><!-- CAROUSEL-HEADER -->
+</div>
 
+
+<!-- STORIES LIST -->
 
 {% if stories_list %}
-<div class="container marketing">
+<div class="container marketing limit-size ">
     {% for item in stories_list %}
     <hr class="featurette-divider">
     <div class="row featurette">
@@ -58,6 +60,7 @@
             <p class="lead"> {{ item.2 }} </p>
         </div>
         <div class="col-md-5 col-md-pull-7">
+            <!-- TODO(HTML) Update this --> <br><br><br><br><br><br>
             <img class="featurette-image img-responsive center-block" src="{{ item.3 }}"
                  alt="Generic Story image"/>
         </div>
@@ -71,6 +74,7 @@
             <p class="lead"> {{ item.2 }} </p>
         </div>
         <div class="col-md-5">
+            <!-- TODO(HTML) Update this --> <br><br><br><br><br><br>
             <img class="featurette-image img-responsive center-block" src="{{ item.3 }}"
                  alt="Generic Story image">
         </div>

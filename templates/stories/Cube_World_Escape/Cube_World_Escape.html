@@ -1,0 +1,148 @@
+{% load static %}
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 4.1.6.2 (Linux)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="0;0">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 1in }
+		P { margin-bottom: 0.08in }
+		A:link { so-language: zxx }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P ALIGN=RIGHT STYLE="margin-bottom: 0in"><B>History of the “Cube
+World Escape” Development</B></P>
+<P ALIGN=RIGHT STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in">Development
+history of this game began with the idea to make a 3D game for mobile
+platforms. We liked this idea because 3D games attract almost
+everybody with their vividness, game world and atmosphere. We faced
+the problem of choosing game genre and game scenario. As it was out
+first experience of game development and considering the lack of
+time, we decided to choose a puzzle game. We wanted a user to think,
+but also to get lots of positive emotions and joy each time he makes
+a right choice.</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in">Today
+there are already created a lot of various puzzle games. There are
+real hits among them – “Three in a Row”, «Monument Valley»,
+«The Room» and so on. This only proved our conviction that such
+kind of games is really popular – people like to play them a lot.</P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in"><B>Creation of game plot and game logic</B></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in">Having
+chosen genre and idea we started to create a plot. Scenario of a
+puzzle-game is not very vivid and original and lies in proper
+distribution of game quests for a player. You need to gradually
+increase complexity of quests with the progression of the game. After
+some discussions and looking at the examples of some puzzle-games we
+decided to make a parallelepiped our main hero. Gameplay itself was
+in positioning that parallelepiped vertically on a finish platform by
+successively upturning it through the level map. If a player succeeds
+– level is passed. If a player falls off the platform the level is
+failed. There will be a possibility to restart that level or to
+return to the menu to choose another level (only out of the opened
+ones) to go. Gameplay turned out to be extremely simple. Main point
+is complexity and attractiveness of levels, which according to the
+plan should attract a player on their own by continuously challenging
+him one level after another. Next task was to organize game logic and
+mechanics in order to reach the main effect of the game which is to
+make a player feel comfortable while making a choice and a number of
+choices and, as a result, combinations of game passing were not
+limited at all. We wanted to make a game that had only one right
+solution to complete a level, but a player could have an unlimited
+choice from a great number of different variants.</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in"><B>Points gaining system</B></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in">Some
+discussions took place when choosing a points gaining system. In the
+process we stopped at the following. In the process player was
+awarded by a certain number of stars. Game aim is to complete a level
+with the maximal number of stars. Number of stars awarded for the
+level completion is counted out of the minimal number of moves (for
+each level particularly).</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in">3 stars - min =&lt; c &lt;
+(min + 5%)</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in">2 stars - (min + 6%) &lt;
+c &lt; (min + 15%)</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in">1 star - (min + 16%) &lt;
+c &lt; (min + 30%)</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in">0 stars - (min + 31%) &lt;
+c &lt; infinity</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in">Where:</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in">min - minimal number of
+moves on this level</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in">c - number of moves made
+by a player</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"> 
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in">For example:</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in">On 16 level minimal
+number of moves (min) equals 63.</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in">In order to get:</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in">3 stars - number of moves
+made by a player (с) from 63 to 67</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in">2 stars - number of moves
+made by a player (с) from 68 to 73</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in">1 star - number of moves
+made by a player (с) from 74 to 82</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in">0 stars - number of moves
+made by a player (с) from 83 to infinity</P>
+<P STYLE="margin-bottom: 0in"> 
+</P>
+<P STYLE="margin-bottom: 0in"><B>Game design</B></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in">Considering
+that in this game design plays a crucial role, we decided to regard a
+design question as one of the most important ones. We required design
+that could not only emphasize, but also increase player’s
+impression from the game itself. At the same time it should be clear
+to a player on a hunch. The first variant of game’s design appeared
+instantly. The game should be made in old Egyptian style. Or as in
+films where main characters try to reach the tomb – “Lara Croft”,
+“Indiana Jones”, etc. While doing this, heroes solve puzzles and
+look for the keys. The first design looked like this:</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><IMG SRC="{% static 'stories/Cube_World_Escape/i_4a6c82bcd011bd66_html_5b90d4d3.jpg' %}" NAME="image14.png" ALIGN=BOTTOM HSPACE=12 VSPACE=12 WIDTH=272 HEIGHT=194 BORDER=0>
+           
+<IMG SRC="{% static 'stories/Cube_World_Escape/i_4a6c82bcd011bd66_html_3ab3c570.jpg' %}" NAME="image11.png" ALIGN=BOTTOM HSPACE=12 VSPACE=12 WIDTH=272 HEIGHT=194 BORDER=0></P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in"> 
+</P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.5in; margin-bottom: 0in">After
+estimating the design we decided that it does not suit us. For this
+game we need minimalistic design that is not spoiling the general
+impression. Perhaps, this design did not create the atmosphere
+according to the initial idea. The second variant of the design
+became final and it is futuristic. It makes game design and UI design
+look naturally.</P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="{% static 'stories/Cube_World_Escape/i_4a6c82bcd011bd66_html_19738bf2.jpg' %}" NAME="image13.png" ALIGN=BOTTOM HSPACE=12 VSPACE=12 WIDTH=601 HEIGHT=377 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="{% static 'stories/Cube_World_Escape/i_4a6c82bcd011bd66_html_16527a5f.jpg' %}" NAME="image15.png" ALIGN=BOTTOM HSPACE=12 VSPACE=12 WIDTH=602 HEIGHT=376 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="{% static 'stories/Cube_World_Escape/i_4a6c82bcd011bd66_html_28741e69.jpg' %}" NAME="image10.png" ALIGN=BOTTOM HSPACE=12 VSPACE=12 WIDTH=602 HEIGHT=337 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="{% static 'stories/Cube_World_Escape/i_4a6c82bcd011bd66_html_996a6f99.jpg' %}" NAME="image12.png" ALIGN=BOTTOM HSPACE=12 VSPACE=12 WIDTH=601 HEIGHT=340 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="{% static 'stories/Cube_World_Escape/i_4a6c82bcd011bd66_html_633041b6.jpg' %}" NAME="image03.png" ALIGN=BOTTOM HSPACE=12 VSPACE=12 WIDTH=602 HEIGHT=337 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="{% static 'stories/Cube_World_Escape/i_4a6c82bcd011bd66_html_5ea32965.jpg' %}" NAME="image04.png" ALIGN=BOTTOM HSPACE=12 VSPACE=12 WIDTH=601 HEIGHT=338 BORDER=0></P>
+<P STYLE="margin-bottom: 0in">Link for the video:</P>
+<P STYLE="margin-bottom: 0in"><A HREF="https://youtu.be/QCi7aaBqNcE"><FONT COLOR="#1155cc"><U>https://youtu.be/QCi7aaBqNcE</U></FONT></A></P>
+<P STYLE="margin-bottom: 0in"> 
+</P>
+<P STYLE="margin-bottom: 0in">Link for the game:</P>
+<P STYLE="margin-bottom: 0in"><A HREF="https://play.google.com/store/apps/details?id=com.ittropica.blockers&amp;hl=ru"><FONT COLOR="#1155cc"><U>https://play.google.com/store/apps/details?id=com.ittropica.blockers&amp;hl=ru</U></FONT></A></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+</BODY>
+</HTML>
